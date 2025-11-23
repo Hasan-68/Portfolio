@@ -38,19 +38,22 @@
 
   <section class="contact-container">
     <h2>Stuur een bericht</h2>
-    <form action="#" method="post">
+    <form name="contact" method="POST" data-netlify="true" netlify-recaptcha="true">
       <div class="mb-3">
         <label for="naam" class="form-label">Naam</label>
-        <input type="text" class="form-control" id="naam" placeholder="Jouw naam" required>
+        <input type="text" class="form-control" id="naam" name="naam" placeholder="Jouw naam" required>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">E-mailadres</label>
-        <input type="email" class="form-control" id="email" placeholder="jij@example.com" required>
+        <input type="email" class="form-control" id="email" name="email" placeholder="jij@example.com" required>
       </div>
       <div class="mb-3">
         <label for="bericht" class="form-label">Bericht</label>
-        <textarea class="form-control" id="bericht" rows="5" placeholder="Typ hier je bericht..." required></textarea>
+        <textarea class="form-control" id="bericht" name="bericht" rows="5" placeholder="Typ hier je bericht..." required></textarea>
       </div>
+
+      <div data-netlify-recaptcha="true"></div>
+
       <div class="text-center">
         <button type="submit" class="btn btn-primary px-4">Verzenden</button>
       </div>
@@ -61,11 +64,8 @@
       <p><i class="bi bi-envelope-fill"></i> <a href="mailto:haso.1997@outlook.com">haso.1997@outlook.com</a></p>
       <p><i class="bi bi-telephone-fill"></i> +32 488 70 38 60</p>
       <p><i class="bi bi-geo-alt-fill"></i> Antwerpen, België</p>
-
-
     </div>
   </section>
-
   <footer class="bg-dark text-center py-3">
   <div class="container">
     <div class="d-flex justify-content-center gap-4">
